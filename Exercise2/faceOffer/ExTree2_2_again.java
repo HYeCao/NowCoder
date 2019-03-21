@@ -4,14 +4,13 @@
 package faceOffer;
 
 /**
- *  
+ * 操作给定的二叉树，将其变换为源二叉树的镜像
  * @author dell
  *
  */
-public class ExTree2_2 {
+public class ExTree2_2_again {
 
 	/**
-	 * 操作给定的二叉树，将其变换为源二叉树的镜像
 	 * @param args
 	 */
 	public static void main(String[] args) {
@@ -27,22 +26,18 @@ public class ExTree2_2 {
 		node2.right=node5;
 		Mirror(node1);
 	}
-	/**
-	 * 
-	 * @param node
-	 */
-	public static void Mirror(TreeNode root){
+
+	private static void Mirror(TreeNode root) {
+		// TODO Auto-generated method stub
 		TreeNode temp;
-		if(root!=null){
-			temp=root.left;
-			root.left=root.right;
-			root.right=temp;
-		if(root.left!=null){
-			Mirror(root.left);
-		}
-		if(root.right!=null){
-			Mirror(root.right);
-		}
-		}
+		if(root==null)return;
+		temp=root.left;
+		root.left=root.right;
+		root.right=temp;
+		if(root.left!=null)
+		Mirror(root.left);
+		if(root.right!=null)
+		Mirror(root.right);
 	}
+
 }

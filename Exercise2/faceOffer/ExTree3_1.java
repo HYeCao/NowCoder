@@ -26,9 +26,9 @@ public class ExTree3_1 {
 	 */
 	   public static boolean VerifySquenceOfBST(int [] sequence) {
 		   int len=sequence.length;
+		   if(len==0)return false;
 		   int root=sequence[len-1];//获取根节点
-		   Squ(sequence, 0, len);
-		   return false;      
+		   return Squ(sequence, 0, len);
 	   }
 	   /**
 	    * 重点：返回的条件   赋值的数据  起止两个结点
