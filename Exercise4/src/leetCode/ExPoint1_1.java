@@ -42,6 +42,7 @@ public class ExPoint1_1 {
 
 	/*
 	 * 思想：循环+递归
+	 * 斜率判断：0很关键
 	 */
 	public static int maxPoints(Point[] points) {
 		if (points.length == 1) {
